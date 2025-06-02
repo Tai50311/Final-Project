@@ -1,0 +1,129 @@
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+li {
+  background-color: #dce5e3;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+
+#taskInput, #taskDueDate {
+  width: 97%;
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* 任務項目容器 */
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+.task-text {
+  vertical-align: middle;
+  user-select: none;
+  display: inline-block;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 自訂圓形勾選框 */
+.checkbox-circle {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #555;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  margin-right: 8px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.checkbox-circle.checked::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #a3b9b4;
+  border-color: #555;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-shrink: 0;
+}
+
+/* 刪除按鈕 */
+.delete-btn {
+  white-space: nowrap;
+  margin-left: 10px;
+  background: none;
+  border: 2px solid #8ea29e;
+  color: rgba(255, 74, 74, 0.864);
+  cursor: pointer;
+  font-size: 14px;
+  width: 50px;
+  height: 30px;
+  padding: 0px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-btn:hover {
+  color: darkred;
+  background-color: #dce5e3;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+}
+
+/* 編輯輸入欄 */
+.task-edit-input {
+  border: 1.5px solid #c9d6d3;
+  background-color: #f9faf9;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 16px;
+  color: #4a5a54;
+}
+
+.task-edit-input:focus {
+  border-color: #8ea29e;
+  background-color: #dce5e3;
+  outline: none;
+  box-shadow: 0 0 5px #a3b9b4aa;
+}
+
+.task-edit-date {
+  border: 1.5px solid #c9d6d3; /* 綠色邊框 */
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+  color: #333;
+  background-color: #f8fff8;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.task-edit-date:focus {
+  border-color: #8ea29e;
+  background-color: #dce5e3;
+  outline: none;
+  box-shadow: 0 0 5px #a3b9b4aa;
+}
